@@ -1,0 +1,26 @@
+@import 'base.scss';
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Lobster Two';
+}
+
+body {
+    font-family: 'Cabin';
+    background-color: $primary-color;
+    color: $accent-color;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    color: $contrasting-color;
+    text-decoration: underline;
+    &:hover {
+        opacity: .8;
+        color: $contrasting-color;
+    }
+}
