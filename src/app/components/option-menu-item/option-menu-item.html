@@ -3,11 +3,13 @@
 ng-class="{active: $ctrl.option === $ctrl.selectedOption}"
 
 >
-  <img src="https://cdn-catalog.pizzahut.be/images/be/{{$ctrl.option.images.DEFAULT}}" alt="{{$ctrl.option.description}}" class="option-menu-item__image option-menu-item__image--round" />
+  <img ng-if="$ctrl.option.images" src="https://cdn-catalog.pizzahut.be/images/be/{{$ctrl.option.images.DEFAULT}}" alt="{{$ctrl.option.description}}" class="option-menu-item__image option-menu-item__image--round" />
+
+  <img ng-if="$ctrl.option.image" src="https://cdn-catalog.pizzahut.be/images/be/{{$ctrl.option.image}}" alt="{{$ctrl.option.label}}" class="option-menu-item__image" />
 
 
   <div class="option-menu-item__description">
-    <h3 class="option-menu-item__title">{{$ctrl.option.description}}</h3>
+    <h3 class="option-menu-item__title">{{$ctrl.option.description || $ctrl.option.label}}</h3>
     <p>{{$ctrl.option.text}}</p>
   </div>
 </div>

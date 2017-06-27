@@ -14,5 +14,16 @@ function MainController(pizzaService) {
 
   vm.selectPizza = function (option) {
     vm.selectedPizza = option;
+    vm.selectedCrust = null;
+    vm.selectedSize = null;
+  };
+
+  vm.selectCrust = function (option) {
+    vm.selectedCrust = option;
+    vm.selectedSize = null;
+  };
+
+  vm.selectSize = function (option) {
+    vm.selectedSize = option;
   };
 }
