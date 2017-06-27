@@ -3,6 +3,7 @@ angular.module('app')
     templateUrl: 'app/components/option-menu-item/option-menu-item.html',
     bindings: {
       option: '<',
-      onSelect: '&'
+      onSelect: '&',
+      selectedOption: '<'
     }
   });

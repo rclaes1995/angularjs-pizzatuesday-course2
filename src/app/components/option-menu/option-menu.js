@@ -4,6 +4,7 @@ angular.module('app')
     bindings: {
       options: '<',
       onSelectOption: '&',
-      title: '@'
+      title: '@',
+      selectedOption: '<'
     }
   });
