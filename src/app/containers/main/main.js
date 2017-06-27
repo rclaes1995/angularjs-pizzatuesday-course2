@@ -11,4 +11,8 @@ function MainController(pizzaService) {
     .then(function (pizzas) {
       vm.pizzas = pizzas;
     });
+
+  vm.selectPizza = function (option) {
+    vm.selectedPizza = option;
+  };
 }
