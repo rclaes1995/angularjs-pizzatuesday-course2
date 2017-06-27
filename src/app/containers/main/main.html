@@ -1,28 +1,34 @@
 <page-title></page-title>
-{{$ctrl.selectedPizza.description}}
-{{$ctrl.selectedCrust.label}}
-{{$ctrl.selectedSize.label}}
+
+<div class="order-row">
+
+  <div class="order-item">
+    <h3 class="order-item__title">
+      {{$ctrl.selectedPizza.description}}
+    </h3>
+  </div>
+  <div class="order-item">
+    <h3 class="order-item__title">
+      {{$ctrl.selectedCrust.label}}
+    </h3>
+  </div>
+  <div class="order-item">
+    <h3 class="order-item__title">
+      {{$ctrl.selectedSize.label}}
+    </h3>
+  </div>
+
+</div>
+
 <div class="container-fluid">
   <div class="row">
-    <option-menu
-    title="Pizzas"
-    options="$ctrl.pizzas" on-select-option="$ctrl.selectPizza(option)"
-    selected-option="$ctrl.selectedPizza"
-    ></option-menu>
+    <option-menu title="Pizzas" options="$ctrl.pizzas" on-select-option="$ctrl.selectPizza(option)" selected-option="$ctrl.selectedPizza"></option-menu>
 
-    <option-menu
-    ng-if="$ctrl.selectedPizza"
-    title="Crusts"
-    options="$ctrl.selectedPizza.options[0].values" on-select-option="$ctrl.selectCrust(option)"
-    selected-option="$ctrl.selectedCrust"
-    ></option-menu>
+    <option-menu ng-if="$ctrl.selectedPizza" title="Crusts" options="$ctrl.selectedPizza.options[0].values" on-select-option="$ctrl.selectCrust(option)"
+      selected-option="$ctrl.selectedCrust"></option-menu>
 
-    <option-menu
-    ng-if="$ctrl.selectedCrust"
-    title="Sizes"
-    options="$ctrl.selectedPizza.options[1].values" on-select-option="$ctrl.selectSize(option)"
-    selected-option="$ctrl.selectedSize"
-    ></option-menu>
+    <option-menu ng-if="$ctrl.selectedCrust" title="Sizes" options="$ctrl.selectedPizza.options[1].values" on-select-option="$ctrl.selectSize(option)"
+      selected-option="$ctrl.selectedSize"></option-menu>
   </div>
 </div>
 
