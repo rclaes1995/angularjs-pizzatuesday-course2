@@ -3,6 +3,7 @@ angular.module('app')
     templateUrl: 'app/components/option-menu/option-menu.html',
     bindings: {
       options: '<',
-      onSelectOption: '&'
+      onSelectOption: '&',
+      title: '@'
     }
   });

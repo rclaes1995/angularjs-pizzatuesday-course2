@@ -1,6 +1,6 @@
 <div class="col-xs-4">
   <div class="options-menu">
-    <h2 class="options-menu__title">Pizzas</h2>
+    <h2 class="options-menu__title">{{$ctrl.title}}</h2>
     <div class="options-menu__list">
       <option-menu-item ng-repeat="option in $ctrl.options" option="option" on-select="$ctrl.onSelectOption({ option: option})"></option-menu-item>
     </div>

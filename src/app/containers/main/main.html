@@ -1,8 +1,10 @@
 <page-title></page-title>
-{{$ctrl.selectedPizza}}
+{{$ctrl.selectedPizza.description}}
 <div class="container-fluid">
   <div class="row">
-    <option-menu options="$ctrl.pizzas" on-select-option="$ctrl.selectPizza(option)"></option-menu>
+    <option-menu
+    title="Pizzas"
+    options="$ctrl.pizzas" on-select-option="$ctrl.selectPizza(option)"></option-menu>
   </div>
 </div>
 
